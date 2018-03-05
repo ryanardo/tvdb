@@ -1,0 +1,15 @@
+import { Injectable } from '@angular/core';
+import { Http, Response } from '@angular/http';
+import { API_KEY } from './../../api-keys';
+import { Observable } from 'rxjs/Observable';
+
+@Injectable()
+export class TMDB {
+
+	constructor(private http: Http) { }
+
+	getMultiSearch(query: string, page_number: number, include_adult: boolean) {
+		return this.http.get(`https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&language=en-US&query=${query}&page=${page_number}&include_adult=${include_adult}`);
+	}
+
+} //End of the 'TMDB' Constructor.
