@@ -12,6 +12,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "^4.0.0"
+    "bootstrap": "^4.0.0",
+    "angular-ui-carousel": "^0.1.10"
   }
 }
