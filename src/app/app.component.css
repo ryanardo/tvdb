@@ -1,4 +1,21 @@
 .navbar-nav {
   display: inline;
-  
+}
+
+.jumbotron {
+  background-image: url("http://image.tmdb.org/t/p/original/iTyh3hqTUjiRqQo8Uz1w1KtQti9.jpg");
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+}
+
+.box {
+  height: 200px;
+  width: 200px;
+  background-image: url("http://image.tmdb.org/t/p/original/iTyh3hqTUjiRqQo8Uz1w1KtQti9.jpg");
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  text-align: center;
+  padding: 15px;
 }
