@@ -1,5 +1,18 @@
 <div *ngFor="let movie of childSearchResults.results;" class="movie">
   <!-- <img src={ {photo.img_src}}/> -->
   <p>{{movie.title}}</p>
-  <img src="http://image.tmdb.org/t/p/w185/{{movie.backdrop_path}}">
+
+  <div *ngIf="movie.backdrop_path; else noImage">
+    <img src="http://image.tmdb.org/t/p/w185/{{movie.backdrop_path}}">
+  </div>
+  <ng-template #noImage>
+    <p style="color:red">No image available</p>
+  </ng-template>
+
+  <div *ngIf="movie.media_type == 'tv'; else movieRoute">
+    <a href="tv/{{movie.id}}"><button>More</button></a>
+  </div>
+  <ng-template #movieRoute>
+    <a href="movie/{{movie.id}}"><button>More</button></a>
+  </ng-template>
 </div>
