@@ -4,16 +4,22 @@
 
   <div class="form-group">
     <label for="query">What would you like to search for?</label>
-    <input type=text #query>
+    <input type=text value="Game of Thrones" #query>
   </div>
 
   <div class="form-group">
     <label for="adultContent">Allow adult content?</label>
     <select #adultContent>
-      <option value="false">No</option>
       <option  value="true">Yes</option>
+      <option value="false">No</option>
     </select>
   </div>
 
   <button (click)="getSearchResults(query.value, adultContent.value)">Get Movies</button>
 </form>
+
+<!-- <app-search-results></app-search-results> -->
+
+<div *ngIf="movies">
+  <app-search-results [childSearchResults]="movies"></app-search-results>
+</div>
