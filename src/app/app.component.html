@@ -1,4 +1,12 @@
-<h1>
-  {{title}}
-</h1>
+<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+    <div class="container">
+        <a class="navbar-brand">Angular Router</a>
+        <ul class="nav navbar-nav" routerLinkActive="active">
+            <li class="nav-item"><a class="nav-link" routerLink="login">Login</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="favorites">★ Favorites ★</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="search">Search</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="browse">Browse</a></li>
+        </ul>
+    </div>
+</nav>
 <router-outlet></router-outlet>
