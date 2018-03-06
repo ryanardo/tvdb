@@ -10,11 +10,8 @@ import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-<<<<<<< HEAD
-=======
 import { AuthGuard } from './auth-gaurd.service';
 
->>>>>>> home-mj-dm
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { ShowDetailComponent } from './components/show-detail/show-detail.component';
@@ -44,15 +41,9 @@ import { UserFavoritesComponent } from './components/user-favorites/user-favorit
 		LoginComponent,
 		HomeComponent,
 		ShowDetailComponent,
-<<<<<<< HEAD
-		SearchComponent,
-		UserFavoritesComponent,
-		SearchFormComponent
-=======
 		UserFavoritesComponent,
 		SearchFormComponent,
 		SearchResultsComponent
->>>>>>> home-mj-dm
 	],
 	providers: [AuthGuard],
 	bootstrap: [AppComponent]
