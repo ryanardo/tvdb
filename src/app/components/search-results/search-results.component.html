@@ -1,4 +1,5 @@
 <div *ngFor="let movie of childSearchResults.results;" class="movie">
   <!-- <img src={ {photo.img_src}}/> -->
-  <p>{{movie.original_name}}</p>
+  <p>{{movie.title}}</p>
+  <img src="http://image.tmdb.org/t/p/w185/{{movie.backdrop_path}}">
 </div>
