@@ -3,21 +3,21 @@
         <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-dashboard"></i>&nbsp;{{ 'Dashboard' | translate }}
         </a>
-        <a [routerLink]="['/charts']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+        <!-- <a [routerLink]="['/charts']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;{{ 'Charts' | translate }}
-        </a>
+        </a> -->
         <a [routerLink]="['/tables']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-table"></i>&nbsp;{{ 'Tables' | translate }}
+            <i class="fa fa-fw fa-table"></i>&nbsp;{{ 'Profile' | translate }}
         </a>
-        <a [routerLink]="['/forms']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+        <!-- <a [routerLink]="['/forms']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-edit"></i>&nbsp;{{ 'Forms' | translate }}
         </a>
         <a [routerLink]="['/bs-element']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-desktop"></i>&nbsp;{{ 'Bootstrap Element' | translate }}
-        </a>
-        <a [routerLink]="['/grid']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+        </a> -->
+        <!-- <a [routerLink]="['/grid']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-wrench"></i>&nbsp;{{ 'Bootstrap Grid' | translate }}
-        </a>
+        </a> -->
         <a [routerLink]="['/components']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-th-list"></i>&nbsp;{{ 'Component' | translate }}
         </a>
@@ -28,23 +28,34 @@
             <li class="nested" [class.expand]="showMenu === 'pages'">
                 <ul class="submenu">
                     <li>
-                        <a href="javascript:void(0)"><span>{{ 'Submenu' | translate }}</span></a>
+                      <a [routerLink]="['/charts']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                          <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;{{ 'Charts' | translate }}
+                      </a>
                     </li>
                     <li>
-                        <a href="javascript:void(0)"><span>{{ 'Submenu' | translate }}</span></a>
+                      <a [routerLink]="['/forms']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                          <i class="fa fa-fw fa-edit"></i>&nbsp;{{ 'Forms' | translate }}
+                      </a>
                     </li>
+                    <!-- <li>
+                      <a [routerLink]="['/tables']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                          <i class="fa fa-fw fa-table"></i>&nbsp;{{ 'Tables' | translate }}
+                      </a>
+                    </li> -->
                     <li>
-                        <a href="javascript:void(0)"><span>{{ 'Submenu' | translate }}</span></a>
+                      <a [routerLink]="['/blank-page']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                          <i class="fa fa-file-o"></i>&nbsp;{{ 'Blank Page' | translate }}
+                      </a>
                     </li>
                 </ul>
             </li>
         </div>
-        <a [routerLink]="['/blank-page']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+        <!-- <a [routerLink]="['/blank-page']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-file-o"></i>&nbsp;{{ 'Blank Page' | translate }}
-        </a>
-        <a class="list-group-item more-themes" href="http://www.strapui.com/" >
+        </a> -->
+        <!-- <a class="list-group-item more-themes" href="http://www.strapui.com/" >
             {{ 'More Theme' | translate }}
-        </a>
+        </a> -->
         <div class="header-fields">
             <a (click)="rltAndLtr()" class="list-group-item">
                 <span><i class="fa fa-arrows-h"></i>&nbsp; RTL/LTR</span>
