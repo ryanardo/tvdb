@@ -12,17 +12,20 @@ import { SearchComponent } from './components/search/search.component';
 import { UserFavoritesComponent } from './components/user-favorites/user-favorites.component';
 import { SearchFormComponent } from './components/search-form/search-form.component';
 import { SearchResultsComponent } from './components/search-results/search-results.component';
+import { MovieDetailComponent } from './components/movie-detail-page/movie-detail-page.component';
+import { TvDetailPageComponent } from './components/tv-detail-page/tv-detail-page.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		LoginComponent,
-		HomeComponent,
 		ShowDetailComponent,
 		SearchComponent,
 		UserFavoritesComponent,
 		SearchFormComponent,
-		SearchResultsComponent
+		SearchResultsComponent,
+		MovieDetailComponent,
+		TvDetailPageComponent
 	],
 	imports: [
 		BrowserModule,
