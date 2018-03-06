@@ -8,32 +8,40 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AuthGuard } from './shared';
-
-// AoT requires an exported function for factories
-export function createTranslateLoader(http: HttpClient) {
-    // for development
-    // return new TranslateHttpLoader(http, '/start-angular/SB-Admin-BS4-Angular-5/master/dist/assets/i18n/', '.json');
-    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
-}
+import { LoginComponent } from './components/login/login.component';
+import { HomeComponent } from './components/home/home.component';
+import { ShowDetailComponent } from './components/show-detail/show-detail.component';
+import { SearchComponent } from './components/search/search.component';
+import { UserFavoritesComponent } from './components/user-favorites/user-favorites.component';
+import { SearchFormComponent } from './components/search-form/search-form.component';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        BrowserModule,
-        BrowserAnimationsModule,
-        HttpClientModule,
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: createTranslateLoader,
-                deps: [HttpClient]
-            }
-        }),
-        AppRoutingModule
-    ],
-    declarations: [AppComponent],
-    providers: [AuthGuard],
-    bootstrap: [AppComponent]
+	imports: [
+		CommonModule,
+		BrowserModule,
+		BrowserAnimationsModule,
+		HttpClientModule,
+		AppRoutingModule,
+		FormsModule,
+		HttpModule,
+		TranslateModule.forRoot({
+			loader: {
+				provide: TranslateLoader,
+				useFactory: createTranslateLoader,
+				deps: [HttpClient]
+			}
+		})
+	],
+	declarations: [
+		AppComponent,
+		LoginComponent,
+		HomeComponent,
+		ShowDetailComponent,
+		SearchComponent,
+		UserFavoritesComponent,
+		SearchFormComponent
+	],
+	providers: [AuthGuard],
+	bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
