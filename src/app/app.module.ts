@@ -12,6 +12,7 @@ import { SearchComponent } from './components/search/search.component';
 import { UserFavoritesComponent } from './components/user-favorites/user-favorites.component';
 import { SearchFormComponent } from './components/search-form/search-form.component';
 import { SearchResultsComponent } from './components/search-results/search-results.component';
+import { TrendComponent } from './trend/trend.component';
 
 @NgModule({
 	declarations: [
@@ -22,7 +23,8 @@ import { SearchResultsComponent } from './components/search-results/search-resul
 		SearchComponent,
 		UserFavoritesComponent,
 		SearchFormComponent,
-		SearchResultsComponent
+		SearchResultsComponent,
+		TrendComponent
 	],
 	imports: [
 		BrowserModule,
