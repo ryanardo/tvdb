@@ -1,0 +1,28 @@
+<div [@routerTransition]>
+    <h2 class="text-muted">Television & Movies</h2>
+    <div class="row">
+        <div class="col-md-12">
+            <ngb-carousel>
+                <ng-template ngbSlide *ngFor="let slider of sliders">
+                  <div class="header">
+                    <img class="img-fluid mx-auto d-block" [src]="slider.imagePath" alt="Random first slide" width="100%">
+                  </div>
+                    <div class="carousel-caption">
+                        <h3>{{slider.label}}</h3>
+                        <p>{{slider.text}}</p>
+                        <h4>The Maze Runner</h4>
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+    </div>
+    <hr>
+    <h2 class="text-muted">Popular Films</h2>
+    <div class="box" id="box1">
+    </div>
+    <div class="box" id="box2">
+    </div>
+    <div class="box" id="box3">
+    </div>
+    <div class="box" id="box4">
+    </div>

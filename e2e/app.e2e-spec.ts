@@ -1,14 +1,14 @@
-import { TvdbPage } from './app.po';
+import { AppPage } from './app.po';
 
-describe('tvdb App', () => {
-  let page: TvdbPage;
+describe('test-ng4 App', () => {
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new TvdbPage();
+    page = new AppPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('SB Admin BS4 Angular5');
   });
 });

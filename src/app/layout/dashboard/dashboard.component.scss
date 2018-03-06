@@ -1,0 +1,62 @@
+h4 {
+	color: #fff;
+	font-family: 'Six Caps';
+  border-bottom: 3px solid #ff4411;
+	font-size: 48px;
+  font-weight: 400;
+  font-weight: bold;
+  line-height: 72px;
+  text-align: center;
+  text-shadow:  -2px 1px 10px #ff4411;
+	letter-spacing: 35px;
+  text-indent: 24px;
+	text-transform: uppercase;
+}
+
+
+
+
+.box {
+  display: inline-block;
+  height: 300px;
+  width: 300px;
+  margin-top: 5px;
+}
+
+#box1 {
+  background-image:
+  url("http://image.tmdb.org/t/p/original/lkOZcsXcOLZYeJ2YxJd3vSldvU4.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#box2 {
+  background-image: url("http://image.tmdb.org/t/p/original/zAd0MjURkOvJynIsqmLMBcICxUt.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#box3 {
+  background-image: url("http://image.tmdb.org/t/p/original/lkOZcsXcOLZYeJ2YxJd3vSldvU4.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#box4 {
+  background-image: url("http://image.tmdb.org/t/p/original/b6ZJZHUdMEFECvGiDpJjlfUWela.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.header{
+  width: 100%;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0, rgba(0,0,0,1) 19%, rgba(0,0,0,0) 100%);
+    opacity: .7;
+  }
+}
