@@ -7,11 +7,13 @@ import { HomeComponent } from './components/home/home.component';
 import { ShowDetailComponent } from './components/show-detail/show-detail.component';
 import { SearchComponent } from './components/search/search.component';
 import { UserFavoritesComponent } from './components/user-favorites/user-favorites.component';
+import { SearchFormComponent } from './components/search-form/search-form.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const appRoutes: Routes = [
 	{
 		path: '',
-		component: LoginComponent
+		component: DashboardComponent
 	},
 	{
 		path: '/user',

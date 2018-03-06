@@ -20,6 +20,7 @@
 		"@angular/platform-browser": "^4.0.0",
 		"@angular/platform-browser-dynamic": "^4.0.0",
 		"@angular/router": "^4.0.0",
+		"@ng-bootstrap/ng-bootstrap": "^1.0.0",
 		"bootstrap": "^4.0.0",
 		"core-js": "^2.4.1",
 		"promise-polyfill": "7.1.0",
@@ -28,7 +29,7 @@
 	},
 	"devDependencies": {
 		"@angular/cli": "^1.0.0",
-		"@angular/compiler-cli": "^4.0.0",
+		"@angular/compiler-cli": "3.3.7",
 		"@types/jasmine": "^2.5.38",
 		"@types/node": "~6.0.60",
 		"codelyzer": "~2.0.0",
