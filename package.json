@@ -20,14 +20,17 @@
 		"@angular/platform-browser": "^4.0.0",
 		"@angular/platform-browser-dynamic": "^4.0.0",
 		"@angular/router": "^4.0.0",
+		"angularfire2": "^4.0.0-rc0",
 		"bootstrap": "^4.0.0",
 		"core-js": "^2.4.1",
+		"firebase": "^3.9.0",
+		"firebase-tools": "^3.17.4",
 		"promise-polyfill": "7.1.0",
 		"rxjs": "^5.1.0",
 		"zone.js": "^0.8.4"
 	},
 	"devDependencies": {
-		"@angular/cli": "^1.0.0",
+		"@angular/cli": "^1.6.5",
 		"@angular/compiler-cli": "^4.0.0",
 		"@types/jasmine": "^2.5.38",
 		"@types/node": "~6.0.60",
