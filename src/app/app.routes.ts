@@ -11,10 +11,10 @@ import { UserFavoritesComponent } from './components/user-favorites/user-favorit
 const appRoutes: Routes = [
 	{
 		path: '',
-		component: LoginComponent
+		component: HomeComponent
 	},
 	{
-		path: '/user',
+		path: 'user',
 		component: SearchComponent
 	}
 ];
