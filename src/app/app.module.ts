@@ -5,34 +5,56 @@ import { HttpModule } from '@angular/http';
 import { routing } from './app.routing';
 import { MaterializeModule } from "angular2-materialize";
 
+import { masterFirebaseConfig } from './api-keys';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AuthService } from './services/auth.service';
+
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
-import { ShowDetailComponent } from './components/show-detail/show-detail.component';
 import { SearchComponent } from './components/search/search.component';
 import { UserFavoritesComponent } from './components/user-favorites/user-favorites.component';
 import { SearchFormComponent } from './components/search-form/search-form.component';
 import { SearchResultsComponent } from './components/search-results/search-results.component';
+import { TrendComponent } from './components/trend/trend.component';
+import { MovieDetailComponent } from './components/movie-detail-page/movie-detail-page.component';
+import { TvDetailPageComponent } from './components/tv-detail-page/tv-detail-page.component';
+import { ShowDetailComponent } from './components/show-detail/show-detail.component';
+
+export const firebaseConfig = {
+	apiKey: masterFirebaseConfig.apiKey,
+	authDomain: masterFirebaseConfig.authDomain,
+	databaseURL: masterFirebaseConfig.databaseURL,
+	storageBucket: masterFirebaseConfig.storageBucket
+};
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		LoginComponent,
-		HomeComponent,
-		ShowDetailComponent,
 		SearchComponent,
 		UserFavoritesComponent,
 		SearchFormComponent,
-		SearchResultsComponent
+		SearchResultsComponent,
+		TrendComponent,
+		MovieDetailComponent,
+		TvDetailPageComponent,
+		HomeComponent,
+		ShowDetailComponent
 	],
 	imports: [
 		BrowserModule,
 		FormsModule,
 		HttpModule,
 		routing,
+		AngularFireModule.initializeApp(firebaseConfig),
+		AngularFireDatabaseModule,
+		AngularFireAuthModule,
 		MaterializeModule
 	],
-	providers: [],
+	providers: [AuthService],
 	bootstrap: [AppComponent]
 })
 

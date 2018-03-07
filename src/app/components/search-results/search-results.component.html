@@ -1,11 +1,9 @@
 <div *ngFor="let movie of childSearchResults.results;" class="movie">
   <!-- <img src={ {photo.img_src}}/> -->
-
   <p>{{movie.title}}</p>
 
   <div *ngIf="movie.backdrop_path; else noImage">
     <img src="http://image.tmdb.org/t/p/w185/{{movie.backdrop_path}}">
-
   </div>
   <ng-template #noImage>
     <p style="color:red">No image available</p>
