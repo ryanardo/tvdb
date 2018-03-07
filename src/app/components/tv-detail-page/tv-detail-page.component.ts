@@ -13,6 +13,7 @@ import { TMDB_API } from './../../services/api/tmdb.service';
 
 export class TvDetailPageComponent implements OnInit {
 
+	result: any[] = null;
 	public href: string = "";
 
 	constructor(private router: Router, private tmdb_api: TMDB_API) { }
@@ -24,9 +25,9 @@ export class TvDetailPageComponent implements OnInit {
 
 	getDetails(id: string) {
 		this.tmdb_api.getMovieById(id).subscribe(response => {
-			var details = response.json();
-			console.log(details);
+			this.result = response.json();
+			console.log(this.result);
 		});
-
 	}
-}
+	// this.projectToDisplay = this.projectService.getProjectById(this.projectKey);
+} //End
