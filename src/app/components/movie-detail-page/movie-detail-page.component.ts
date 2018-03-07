@@ -15,7 +15,10 @@ export class MovieDetailComponent implements OnInit {
 
 	public href: string = "";
 	public id: string="";
-	public example;
+	public content;
+	public actor;
+	public similar;
+	public video;
 
 	constructor(private router: Router, private tmdb_api: TMDB_API) { }
 
@@ -23,9 +26,17 @@ export class MovieDetailComponent implements OnInit {
 		this.href = this.router.url;
 		//this.id = this.href.substr(4, 12);
 		 this.tmdb_api.getMovieById(this.href.substr(7, 12)).subscribe(response => {
-			this.example = response.json();
-			console.log(this.example)
+			this.content = response.json();
 			});
+		this.tmdb_api.getActors(this.href.substr(1, 12)).subscribe(response => {
+		 this.actor = response.json();
+		 });
+		 this.tmdb_api.getSimilar(this.href.substr(1, 12)).subscribe(response => {
+			this.similar = response.json();
+			});
+		this.tmdb_api.getVideos(this.href.substr(1, 12)).subscribe(response => {
+		 this.video = response.json();
+		 });
 	}
 
 }

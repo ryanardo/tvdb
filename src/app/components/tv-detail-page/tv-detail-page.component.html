@@ -16,3 +16,12 @@
   <p> {{ creator.name }}</p>
   <img src="http://image.tmdb.org/t/p/w185/{{creator.profile_path}}">
 </div>
+
+<div>
+  <h3>Similar Shows</h3>
+  <div *ngFor="let show of similar.results">
+    <p> {{ show.name }}</p>
+    <p>First Aired: <strong>{{show.first_air_date}}</strong></p>
+    <img src="http://image.tmdb.org/t/p/w500/{{show.backdrop_path}}">
+  </div>
+</div>
