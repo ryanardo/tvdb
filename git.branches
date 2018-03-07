@@ -1,0 +1,3 @@
+git rm -r
+git commit -m "Remove duplicated directory"
+git push origin <your-git-branch> (typically 'master', but not always)
