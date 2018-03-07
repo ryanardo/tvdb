@@ -15,8 +15,7 @@ export class TMDB_API {
 	getMultiSearch(query: string, include_adult: string) {
 		return this.http.get(`https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&language=en-US&query=${query}&page=1&include_adult=${include_adult}`);
 	}
-
-	getMovieNowPlaying(id: number) {
+	getMovieNowPlaying() {
 		return this.http.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`);
 	}
 
