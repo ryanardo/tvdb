@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routing } from './app.routing';
+import { MaterializeModule } from "angular2-materialize";
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -28,7 +29,8 @@ import { SearchResultsComponent } from './components/search-results/search-resul
 		BrowserModule,
 		FormsModule,
 		HttpModule,
-		routing
+		routing,
+		MaterializeModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
