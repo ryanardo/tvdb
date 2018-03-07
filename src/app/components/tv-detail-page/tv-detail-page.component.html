@@ -1,3 +1,18 @@
-<p>
-  {{result}}
+<div>
+<img src="http://image.tmdb.org/t/p/w1280/{{example.backdrop_path}}">
+<h1>
+  {{example.name}}
+</h1>
+<ul *ngFor="let genre of example.genres">
+  <li> {{genre.name }} </li>
+</ul>
+<hr>
+<h4> Overview</h4>
+  <p>
+  {{example.overview}}
 </p>
+<h4> Creators</h4>
+<div *ngFor="let creator of example.created_by">
+  <p> {{ creator.name }}</p>
+  <img src="http://image.tmdb.org/t/p/w185/{{creator.profile_path}}">
+</div>
