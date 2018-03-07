@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-
+import { Router } from '@angular/router';
 import { TMDB_API } from './../../services/api/tmdb.service';
 
 @Component({
@@ -20,7 +20,9 @@ export class SearchFormComponent implements OnInit {
 		this.tmdb_api.getMultiSearch(query, adultContent).subscribe(response => {
 			this.movies = response.json();
 		});
+
 	}
+
 
 	ngOnInit() {
 	}
