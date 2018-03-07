@@ -8,5 +8,5 @@ import { routing } from './app.routing';
 })
 
 export class AppComponent {
-	title = 'app works!';
+	title = '';
 }
