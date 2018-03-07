@@ -7,7 +7,6 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
-import { ShowDetailComponent } from './components/show-detail/show-detail.component';
 import { SearchComponent } from './components/search/search.component';
 import { UserFavoritesComponent } from './components/user-favorites/user-favorites.component';
 import { SearchFormComponent } from './components/search-form/search-form.component';
@@ -19,7 +18,6 @@ import { TvDetailPageComponent } from './components/tv-detail-page/tv-detail-pag
 	declarations: [
 		AppComponent,
 		LoginComponent,
-		ShowDetailComponent,
 		SearchComponent,
 		UserFavoritesComponent,
 		SearchFormComponent,
