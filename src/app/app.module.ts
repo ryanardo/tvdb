@@ -24,7 +24,8 @@ export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
   authDomain: masterFirebaseConfig.authDomain,
   databaseURL: masterFirebaseConfig.databaseURL,
-  storageBucket: masterFirebaseConfig.storageBucket
+  storageBucket: masterFirebaseConfig.storageBucket,
+  import { SearchFormComponent } from './components/search-form/search-form.component';
 };
 
 @NgModule({
@@ -35,7 +36,8 @@ export const firebaseConfig = {
     ShowDetailComponent,
     SearchComponent,
     UserFavoritesComponent,
-    UserRegistrationComponent
+    UserRegistrationComponent,
+    SearchFormComponent
   ],
   imports: [
     BrowserModule,

@@ -12,6 +12,10 @@ const appRoutes: Routes = [
 	{
 		path: '',
 		component: LoginComponent
+	},
+	{
+		path: '/user',
+		component: SearchComponent
 	}
 ];
 
