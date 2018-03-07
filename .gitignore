@@ -44,3 +44,6 @@ Thumbs.db
 # API Keys
 .env
 api-keys.ts
+
+# Bower
+bower_components/*
