@@ -22,6 +22,7 @@ import { TrendComponent } from './components/trend/trend.component';
 import { MovieDetailComponent } from './components/movie-detail-page/movie-detail-page.component';
 import { TvDetailPageComponent } from './components/tv-detail-page/tv-detail-page.component';
 import { ShowDetailComponent } from './components/show-detail/show-detail.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 export const firebaseConfig = {
 	apiKey: masterFirebaseConfig.apiKey,
@@ -42,7 +43,8 @@ export const firebaseConfig = {
 		MovieDetailComponent,
 		TvDetailPageComponent,
 		HomeComponent,
-		ShowDetailComponent
+		ShowDetailComponent,
+		NavBarComponent
 	],
 	imports: [
 		BrowserModule,
