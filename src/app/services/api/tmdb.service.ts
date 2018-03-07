@@ -19,7 +19,7 @@ export class TMDB_API {
 		return this.http.get(`https://api.themoviedb.org/3/tv/{movie_id}?api_key=${API_KEY}&language=en-US`);
 	}
 
-	getMovieNowPlaying(id: number) {
+	getMovieNowPlaying() {
 		return this.http.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`);
 	}
 
