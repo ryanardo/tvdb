@@ -3,6 +3,9 @@ import { Http, Response } from '@angular/http';
 import { API_KEY } from './../../api-keys';
 import { Observable } from 'rxjs/Observable';
 
+
+
+
 @Injectable()
 export class TMDB_API {
 
@@ -22,5 +25,6 @@ export class TMDB_API {
 	getMovieNowPlaying() {
 		return this.http.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`);
 	}
+
 
 } //End of the 'TMDB' Constructor.
