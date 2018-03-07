@@ -5,14 +5,11 @@ import { HttpModule } from '@angular/http';
 import { routing } from './app.routing';
 import { MaterializeModule } from "angular2-materialize";
 
-import { masterFirebaseConfig } from '../../api-keys';
+import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { routing } from './app.routes';
 import { AuthService } from './services/auth.service';
-
-
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
