@@ -18,6 +18,16 @@ export class TMDB_API {
 		return this.http.get(`https://api.themoviedb.org/3/tv/${id}?api_key=${API_KEY}&language=en-US`);
 	}
 
+	getActors(id: string) {
+		return this.http.get(`https://api.themoviedb.org/3/${id}/credits?api_key=${API_KEY}&language=en-US`);
+	}
+	getSimilar(id: string) {
+		return this.http.get(`https://api.themoviedb.org/3/${id}/similar?api_key=${API_KEY}&language=en-US`);
+	}
+	getVideos(id: string) {
+		return this.http.get(`https://api.themoviedb.org/3/${id}/videos?api_key=${API_KEY}&language=en-US`);
+	}
+
 	getMovieNowPlaying(id: number) {
 		return this.http.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`);
 	}
