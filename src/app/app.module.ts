@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routing } from './app.routing';
+import { MaterializeModule } from "angular2-materialize";
 
 import { masterFirebaseConfig } from '../../api-keys';
 import { AngularFireModule } from 'angularfire2';
@@ -50,7 +51,8 @@ export const firebaseConfig = {
 		routing,
 		AngularFireModule.initializeApp(firebaseConfig),
 		AngularFireDatabaseModule,
-		AngularFireAuthModule
+		AngularFireAuthModule,
+		MaterializeModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
