@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
     signInWithGithub() {
       this.authService.signInWithGithub()
          .then((res) => {
-            this.router.navigate(['dashboard'])
+            this.router.navigate([''])
          })
          .catch((err) => console.log(err));
     }
