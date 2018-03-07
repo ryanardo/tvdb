@@ -18,14 +18,15 @@ import { HomeComponent } from './components/home/home.component';
 import { ShowDetailComponent } from './components/show-detail/show-detail.component';
 import { SearchComponent } from './components/search/search.component';
 import { UserFavoritesComponent } from './components/user-favorites/user-favorites.component';
-import { UserRegistrationComponent } from './user-registration/user-registration.component';
+import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
+import {SearchFormComponent} from './components/search-form/search-form.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
   authDomain: masterFirebaseConfig.authDomain,
   databaseURL: masterFirebaseConfig.databaseURL,
   storageBucket: masterFirebaseConfig.storageBucket,
-  import { SearchFormComponent } from './components/search-form/search-form.component';
+
 };
 
 @NgModule({
