@@ -1,3 +1,2 @@
-<p>
-  trend works!
-</p>
+<h1>Movies Now Playing</h1>
+<ul><li *ngFor="let nowPlayingResult of nowPlayingResults.results">{{nowPlayingResult.original_title}}{{nowPlayingResult.vote_average}}</li></ul>
