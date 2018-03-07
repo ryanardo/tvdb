@@ -27,12 +27,4 @@ export class TvDetailPageComponent implements OnInit {
 			});
 	}
 
-	// getDetails(id: string) {
-	// 	return this.tmdb_api.getTVById(id).subscribe(response => {
-	// 		var result = response.json();
-	// 		console.log(result);
-	//
-	// 	});
-	// }
-	// this.projectToDisplay = this.projectService.getProjectById(this.projectKey);
-} //End
+}
