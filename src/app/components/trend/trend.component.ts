@@ -10,17 +10,16 @@ import { TMDB_API } from './../../services/api/tmdb.service';
 })
 
 export class TrendComponent implements OnInit {
-  results: any[] = null;
+  public nowPlayingResults
 
-  constructor(private tmdb_api: TMDB_API) { }
+  constructor(private tmdb_api: TMDB_API) {
+   }
 
   ngOnInit() {
-    this.tmbd_api.getMovieNowPlaying()
-      .then((response) => {
-          this.results = response.json();
-      })
-      .catch((error) => console.log(error));
-
+    this.tmdb_api.getMovieNowPlaying().subscribe(response => {
+      this.nowPlayingResults = response.json();
+      console.log(this.nowPlayingResults)
+    });
   }
 
 }
