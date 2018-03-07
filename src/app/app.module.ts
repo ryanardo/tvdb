@@ -21,6 +21,7 @@ import { SearchResultsComponent } from './components/search-results/search-resul
 import { TrendComponent } from './components/trend/trend.component';
 import { MovieDetailComponent } from './components/movie-detail-page/movie-detail-page.component';
 import { TvDetailPageComponent } from './components/tv-detail-page/tv-detail-page.component';
+import { ShowDetailComponent } from './components/show-detail/show-detail.component';
 
 export const firebaseConfig = {
 	apiKey: masterFirebaseConfig.apiKey,
@@ -39,7 +40,9 @@ export const firebaseConfig = {
 		SearchResultsComponent,
 		TrendComponent,
 		MovieDetailComponent,
-		TvDetailPageComponent
+		TvDetailPageComponent,
+		HomeComponent,
+		ShowDetailComponent
 	],
 	imports: [
 		BrowserModule,
@@ -51,7 +54,7 @@ export const firebaseConfig = {
 		AngularFireAuthModule,
 		MaterializeModule
 	],
-	providers: [],
+	providers: [AuthService],
 	bootstrap: [AppComponent]
 })
 
