@@ -21,6 +21,7 @@ import { SearchComponent } from './components/search/search.component';
 import { UserFavoritesComponent } from './components/user-favorites/user-favorites.component';
 import { SearchFormComponent } from './components/search-form/search-form.component';
 import { SearchResultsComponent } from './components/search-results/search-results.component';
+import { TrendComponent } from './components/trend/trend.component';
 
 export const firebaseConfig = {
 	apiKey: masterFirebaseConfig.apiKey,
@@ -38,7 +39,8 @@ export const firebaseConfig = {
 		SearchComponent,
 		UserFavoritesComponent,
 		SearchFormComponent,
-		SearchResultsComponent
+		SearchResultsComponent,
+		TrendComponent
 	],
 	imports: [
 		BrowserModule,
