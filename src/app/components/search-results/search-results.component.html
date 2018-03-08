@@ -13,28 +13,14 @@
             <div *ngIf="movie.media_type == 'tv'; else movieRoute">
               <!-- <a href="tv/{{movie.id}}"><button>More</button></a> -->
               <h5 class="card-title"> {{movie.original_name}}</h5>
-<<<<<<< HEAD
-
-              <a href="tv/{{movie.id}}" class="btn-floating btn-large waves-effect waves-light deep-purple"><i class="material-icons">info</i></a>
-              <div id="adds">
-              <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">favorite</i></a>
-            </div>
-            </div>
-            <ng-template #movieRoute>
-              <h5 class="card-title"> {{movie.title}}</h5>
-              <a href="tv/{{movie.id}}" class="btn-floating btn-large waves-effect waves-light deep-purple"><i class="material-icons">info</i></a>
-              <div id="add">
-              <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">favorite</i></a>
-            </div>
-=======
               <a href="tv/{{movie.id}}" class="secondary-content"><i class="material-icons">info</i></a>
-              <a class="btn-floating btn-large waves-effect waves-light deep-purple" (click)="saveItem(movie.id, movie.backdrop_path, movie.original_name)"><i class="material-icons">add</i></a>
+              <a class="btn-floating btn-large waves-effect waves-light deep-purple" (click)="saveItem(movie.id,  movie.media_type, movie.backdrop_path, movie.original_name)"><i class="material-icons">add</i></a>
             </div>
             <ng-template #movieRoute>
               <h5 class="card-title"> {{movie.title}}</h5>
               <a href="movie/{{movie.id}}" class="secondary-content"><i class="material-icons">info</i></a>
               <a class="btn-floating btn-large waves-effect waves-light deep-purple" (click)="saveItem(movie.id, movie.backdrop_path, movie.original_name)"><i class="material-icons">add</i></a>
->>>>>>> 887bd759897ceb779302465450ae780f5495b901
+              <a class="btn-floating btn-large waves-effect waves-light deep-purple" (click)="saveItem(movie.id, movie.media_type,  movie.backdrop_path, movie.title)"><i class="material-icons">add</i></a>
             </ng-template>
           </div>
         </div>

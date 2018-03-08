@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 import { TMDB_API } from './../../services/api/tmdb.service';
-
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -24,12 +24,18 @@ export class UserFavoritesComponent implements OnInit {
 
   moviesId: FirebaseListObservable<any[]>;
   idArray: string[];
-  constructor(private database: AngularFireDatabase, private tmdb_api: TMDB_API) {
+  constructor(private database: AngularFireDatabase, private tmdb_api: TMDB_API, private router: Router) {
     this.moviesId = this.database.list('userSave');
 
 
   }
 
+  goToDetailsTv(movieId: string) {
+    this.router.navigate(['tv',movieId ])
+  }
+  goToDetailsMovie(movieId: string) {
+    this.router.navigate(['movie',movieId ])
+  }
 
 
   ngOnInit() {

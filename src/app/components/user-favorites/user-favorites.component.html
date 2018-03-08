@@ -1,10 +1,11 @@
 
-  <div *ngFor="let movie of moviesId | async">
+  <div *ngFor="let movie of moviesId | async" class="favorites">
     <div class="card" style="width: 33.3rem;">
       <img class="card-img-top" src="http://image.tmdb.org/t/p/w500/{{movie.backdrop}}">
       <div class="card-body">
         <h5 class="card-title">{{movie.name}}</h5>
-        <a href="tv/{{movie.itemId}}" class="secondary-content"><i class="material-icons">info</i></a>
+        <a *ngIf="movie.mediaType == 'tv'" (click)="goToDetailsTv(movie.itemId)" class="secondary-content"><button>details<i class="material-icons">info</i></button></a>
+        <a  *ngIf="movie.mediaType == 'movie'"(click)="goToDetailsMovie(movie.itemId)"><button>info<i class="material-icons">info</i></button></a>
   </div>
   </div>
   <br>
@@ -12,4 +13,3 @@
 </div>
 <br>
 <br>
-<a href="/"><i class="material-icons">home</i></a>
