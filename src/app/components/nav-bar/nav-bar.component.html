@@ -13,7 +13,7 @@
             <li><a routerLink=''><i class="material-icons">search</i></a></li>
             <li><a routerLink="trend"><i class="material-icons">trending_up</i></a></li>
             <li><a routerLink="favorites"><i class="material-icons">favorite</i></a></li>
-            <li><a routerLink="login"><i class="material-icons">person</i></a></li>
+            <li *ngIf="!this.authService.userDetails"><a routerLink="login"><i class="material-icons">person</i></a></li>
             <li *ngIf="this.authService.userDetails"><a (click)="authService.logout()" routerLink="login">logout<i class="material-icons"></i></a></li>
           </ul>
         </div>
