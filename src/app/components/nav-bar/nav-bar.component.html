@@ -1,5 +1,6 @@
-<div *ngIf="router.url !== '/login' ">
+<div *ngIf="router.url !== '/login'">
   <div class="navbar-fixed">
+
     <nav>
       <div class="nav-wrapper deep-purple">
         <!-- LEFT PANEL / LOGO -->
@@ -16,17 +17,11 @@
             <li *ngIf= "this.authService.userDetails"><a (click)="authService.logout()" routerLink="login">logout<i class="material-icons"></i></a></li>
           </ul>
         </div>
-        <!-- SEARCH BAR -->
-        <!-- <form class=" hide-on-med-and-down" id="nav-search">
-          <div class="input-field !important" id="nav-search">
-            <input #query id="search" type="search" required onkeyup="getBlogs(this.value,0);" placeholder="Search for your favorite Movies, TV Shows, or Actors!" value="black panther">
-            <i (click)="getSearchResults(query.value, adultContent.value)" class="material-icons">search</i>
-            <div id="searchResults"></div>
-          </div>
-        </form> -->
       </div>
     </nav>
+
   </div>
 </div>
+
 <div>
 </div>

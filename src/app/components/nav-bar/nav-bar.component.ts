@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { routing } from '../../app.routing';
+import { Router } from '@angular/router';
+
 import { AuthService } from '../../services/auth.service';
 import * as firebase from 'firebase';
 
@@ -10,7 +11,7 @@ import * as firebase from 'firebase';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor(public authService: AuthService, private router: Route) { }
+  constructor(public authService: AuthService, private router: Router) { }
 
 	ngOnInit() {
 	}
