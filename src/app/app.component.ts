@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { routing } from './app.routing';
+import {AuthService} from './services/auth.service'
 
 @Component({
 	selector: 'app-root',
@@ -9,5 +10,6 @@ import { routing } from './app.routing';
 })
 
 export class AppComponent {
+	constructor(public authService: AuthService){}
 	title = '';
 }

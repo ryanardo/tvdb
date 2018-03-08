@@ -1,0 +1,53 @@
+#nav-search {
+  margin-left: 200px;
+}
+
+.side-nav li a {
+  text-decoration: none;
+}
+
+#searchResults2 {
+  background-color: #666666;
+}
+
+#searchResults {
+  background-color: #666666;
+}
+
+.right li a {
+  padding-right: 2em;
+  text-decoration: none
+}
+
+#nav-logo {
+  float: left;
+  width: 20%;
+  background-color: #ff0000;
+}
+
+#nav-menu {
+  float: right;
+  width: 20%;
+  background-color: #ff0000;
+}
+
+#nav-search {
+  width: 60%;
+}
+
+.brand-logo {
+  margin-left: 10px;
+  position: absolute;
+  float: left;
+}
+
+#left {
+  float: left;
+  width: 180px;
+  background-color: #ff0000;
+}
+
+#right {
+  width: 100%;
+  background-color: #00FF00;
+}

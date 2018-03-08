@@ -9,10 +9,19 @@ import { LoginComponent } from './components/login/login.component';
 import { ShowDetailComponent } from './components/show-detail/show-detail.component';
 import { UserFavoritesComponent } from './components/user-favorites/user-favorites.component';
 import { HomeComponent } from './components/home/home.component';
+import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
+
+import { AuthGuardService } from './services/auth-guard.service';
+
+
 
 const appRoutes: Routes = [
 	{
 		path: '',
+		component: SearchFormComponent
+	},
+	{
+		path: 'home',
 		component: HomeComponent
 	},
 	{
@@ -41,12 +50,18 @@ const appRoutes: Routes = [
 	},
 	{
 		path: 'favorites',
-		component: UserFavoritesComponent
+		component: UserFavoritesComponent,
+		canActivate: [AuthGuardService]
 	},
 	{
-		path: 'browse',
-		component: ShowDetailComponent
-	}
+		path: 'user-registration',
+		component: UserRegistrationComponent
+
+	},
+	// {
+	// 	path: 'browse',
+	// 	component: ShowDetailComponent
+	// }
 
 ];
 

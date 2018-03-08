@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import { API_KEY } from './../../api-keys';
+import { API_KEY } from '../../api-keys';
 import { Observable } from 'rxjs/Observable';
 
 
@@ -16,10 +16,20 @@ export class TMDB_API {
 	}
 
 	getMovieById(id: string) {
-		return this.http.get(`https://api.themoviedb.org/3/movie/{movie_id}?api_key=${API_KEY}&language=en-US`);
+		return this.http.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`);
 	}
 	getTVById(id: string) {
-		return this.http.get(`https://api.themoviedb.org/3/tv/{movie_id}?api_key=${API_KEY}&language=en-US`);
+		return this.http.get(`https://api.themoviedb.org/3/tv/${id}?api_key=${API_KEY}&language=en-US`);
+	}
+
+	getActors(id: string) {
+		return this.http.get(`https://api.themoviedb.org/3/${id}/credits?api_key=${API_KEY}&language=en-US`);
+	}
+	getSimilar(id: string) {
+		return this.http.get(`https://api.themoviedb.org/3/${id}/similar?api_key=${API_KEY}&language=en-US`);
+	}
+	getVideos(id: string) {
+		return this.http.get(`https://api.themoviedb.org/3/${id}/videos?api_key=${API_KEY}&language=en-US`);
 	}
 
 	getMovieNowPlaying() {
