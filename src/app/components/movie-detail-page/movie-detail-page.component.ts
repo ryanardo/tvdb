@@ -3,7 +3,6 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 import { TMDB_API } from './../../services/api/tmdb.service';
-import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
 
 @Component({
 	selector: 'app-movie-detail-page',
@@ -20,17 +19,15 @@ export class MovieDetailComponent implements OnInit {
 	public actor;
 	public similar;
 	public video;
-	public url: SafeResourceUrl;
 
-	constructor(private router: Router, private tmdb_api: TMDB_API, private sanitizer: DomSanitizer) { }
+	constructor(private router: Router, private tmdb_api: TMDB_API) { }
 
 	ngOnInit() {
-  
-
 		this.href = this.router.url;
-		//this.id = this.href.substr(4, 12);
+
 		 this.tmdb_api.getMovieById(this.href.substr(7, 12)).subscribe(response => {
 			this.content = response.json();
+			console.log(this.href.substr(7, 12))
 			});
 		this.tmdb_api.getActors(this.href.substr(1, 12)).subscribe(response => {
 		 this.actor = response.json();
