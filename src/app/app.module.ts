@@ -26,8 +26,8 @@ import { UserRegistrationComponent } from './components/user-registration/user-r
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ActorsComponent } from './actors/actors.component';
 
-import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
-import {SearchFormComponent} from './components/search-form/search-form.component';
+
+
 export const firebaseConfig = {
 	apiKey: masterFirebaseConfig.apiKey,
 	authDomain: masterFirebaseConfig.authDomain,

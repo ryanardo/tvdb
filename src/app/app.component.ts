@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { routing } from './app.routing';
 import {AuthService} from './services/auth.service'
+import * as firebase from 'firebase';
 
 @Component({
 	selector: 'app-root',
@@ -9,6 +10,6 @@ import {AuthService} from './services/auth.service'
 })
 
 export class AppComponent {
-	constructor(public authService: AuthService){}
-	title = '';
+	constructor(public authService: AuthService){
+	}
 }
