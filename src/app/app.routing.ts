@@ -13,7 +13,7 @@ import { HomeComponent } from './components/home/home.component';
 const appRoutes: Routes = [
 	{
 		path: '',
-		component: HomeComponent
+		component: SearchFormComponent
 	},
 	{
 		path: 'home',
@@ -43,10 +43,10 @@ const appRoutes: Routes = [
 		path: 'favorites',
 		component: UserFavoritesComponent
 	},
-	{
-		path: 'browse',
-		component: ShowDetailComponent
-	}
+	// {
+	// 	path: 'browse',
+	// 	component: ShowDetailComponent
+	// }
 
 ];
 
