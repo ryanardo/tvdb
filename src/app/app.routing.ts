@@ -18,7 +18,11 @@ import { AuthGuardService } from './services/auth-guard.service';
 const appRoutes: Routes = [
 	{
 		path: '',
-		component: SearchFormComponent
+		component: HomeComponent
+	},
+	{
+		path: 'home',
+		component: HomeComponent
 	},
 	{
 		path: 'home',
