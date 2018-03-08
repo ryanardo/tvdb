@@ -13,6 +13,7 @@ import { TMDB_API } from './../../services/api/tmdb.service';
 export class SearchFormComponent implements OnInit {
 
 	movies: any[] = null;
+	public query: string;
 
 	constructor(private tmdb_api: TMDB_API) { }
 

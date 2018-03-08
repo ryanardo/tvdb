@@ -1,3 +1,15 @@
-<p>
-  user-favorites works!
-</p>
+
+  <div *ngFor="let movie of moviesId | async">
+    <div class="card" style="width: 33.3rem;">
+      <img class="card-img-top" src="http://image.tmdb.org/t/p/w500/{{movie.backdrop}}">
+      <div class="card-body">
+        <h5 class="card-title">{{movie.name}}</h5>
+        <a href="tv/{{movie.itemId}}" class="secondary-content"><i class="material-icons">info</i></a>
+  </div>
+  </div>
+  <br>
+  <br>
+</div>
+<br>
+<br>
+<a href="/"><i class="material-icons">home</i></a>
