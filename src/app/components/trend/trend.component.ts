@@ -19,12 +19,10 @@ export class TrendComponent implements OnInit {
   ngOnInit() {
     this.tmdb_api.getMovieNowPlaying().subscribe(response => {
       this.nowPlayingResults = response.json();
-      console.log(this.nowPlayingResults)
     });
 
     this.tmdb_api.getUpcomingMovies().subscribe(response => {
       this.upcomingMovies = response.json();
-      console.log(this.upcomingMovies)
     });
 
   }
