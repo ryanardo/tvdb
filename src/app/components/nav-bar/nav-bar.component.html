@@ -15,14 +15,14 @@
       </div>
       <!-- SEARCH BAR -->
       <form class=" hide-on-med-and-down" id="nav-search">
-        <!-- <div class="input-field" style="max-width: 600pt;"> -->
         <div class="input-field !important" id="nav-search">
-          <!-- <label class="label-icon" for="search">SEARCH</label> -->
-          <input id="search" type="search" required onkeyup="getBlogs(this.value,0);" placeholder="Search for your favorite Movies, TV Shows, or Actors!">
-          <i routerLink="search" class="material-icons">search</i>
+          <input #query id="search" type="search" required onkeyup="getBlogs(this.value,0);" placeholder="Search for your favorite Movies, TV Shows, or Actors!" value="black panther">
+          <i (click)="getSearchResults(query.value, adultContent.value)" class="material-icons">search</i>
           <div id="searchResults"></div>
         </div>
       </form>
     </div>
   </nav>
 </div>
+
+<!-- routerLink="search"  -->
