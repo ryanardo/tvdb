@@ -1,8 +1,8 @@
-<h2>SEARCH</h2>
-
+<h4>Looking for something to watch?</h4>
+<h5>Find the latest in movies and television available now for streaming </h5>
 <form>
   <div class="form-group">
-    <label for="query">What would you like to search for?</label>
+    <label for="query">Search your favorite movies, shows, and actors</label>
     <input type=text value="" #query>
   </div>
 
@@ -23,8 +23,11 @@
     </select>
   </div>
 
-  <a (click)="getSearchResults(query.value, adultContent.value)" class="waves-effect waves-light btn-large deep-purple"><i class="material-icons right">fast_forward</i>GetMovies</a>
-
+  <!-- <a (click)="getSearchResults(query.value, adultContent.value)" class="waves-effect waves-light btn-large deep-purple"><i class="material-icons right">fast_forward</i>GetMovies</a> -->
+  <div class="row">
+    <a (click)="getSearchResults(query.value, adultContent.value)" class="waves-effect waves-light btn col s12 deep-purple">
+    <i></i>Get Movies</a>
+  </div>
 </form>
 
 <!-- <app-search-results></app-search-results> -->

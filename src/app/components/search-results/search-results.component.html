@@ -4,7 +4,7 @@
       <div *ngFor="let movie of childSearchResults.results;" class="movie">
         <div class="card mb-3" style="width: 33.3rem;">
           <div *ngIf="movie.backdrop_path; else noImage">
-            <img class="card-img-top" src="http://image.tmdb.org/t/p/w500/{{movie.backdrop_path}}" >
+            <img class="card-img-top" src="http://image.tmdb.org/t/p/w500/{{movie.backdrop_path}}">
           </div>
           <ng-template #noImage>
             <img class="card-img-top" src="http://www.valuewalk.com/wp-content/uploads/2017/04/no-thumbnail.png" width="500px" height="281px" alt="Card image cap">
@@ -29,8 +29,8 @@
 </div>
 
 
-  <!-- <img src={ {photo.img_src}}/> -->
-  <!-- <p>{{movie.title}}</p>
+<!-- <img src={ {photo.img_src}}/> -->
+<!-- <p>{{movie.title}}</p>
 
   <div *ngIf="movie.backdrop_path; else noImage">
     <img src="http://image.tmdb.org/t/p/w500/{{movie.backdrop_path}}">
