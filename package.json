@@ -29,7 +29,11 @@
 		"hammerjs": "^2.0.8",
 		"jquery": "^2.2.4",
 		"materialize-css": "^0.100.2",
+<<<<<<< HEAD
 		"materialize-social": "^1.0.3",
+=======
+		"ng-src": "^1.0.1",
+>>>>>>> 94ba91aeee54b9b59499cbd7bae64ce35fd50e3f
 		"popper.js": "^1.12.9",
 		"promise-polyfill": "7.1.0",
 		"rxjs": "^5.1.0",
