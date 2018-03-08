@@ -1,3 +1,20 @@
-<p>
-  trend works!
-</p>
+<div class="container">
+  <h1>Now Playing</h1>
+  <div class="row">
+      <div class="col s6">
+        <div class="card-panel hoverable" *ngFor="let nowPlayingResult of nowPlayingResults.results">
+          <div class="card-image">
+            <img src="http://image.tmdb.org/t/p/w185/{{nowPlayingResult.poster_path}}">
+            <br>
+            <span class="card-title">{{nowPlayingResult.original_title}}</span>
+          </div>
+          <div class="card-content">
+            <p>{{nowPlayingResult.overview}}</p>
+          </div>
+          <div class="card-action">
+            <span class="badge">Movie Rating: {{nowPlayingResult.vote_average}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
