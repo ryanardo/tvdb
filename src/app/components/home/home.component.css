@@ -3,7 +3,7 @@ h1 {
 }
 
 body {
-background-image: url("assets/images/films.jpg");
-background-repeat: repeat;
-   background-size: auto;
+  background-image: url("assets/images/films_cropped.jpg");
+  background-repeat: repeat;
+  background-size: auto;
 }
