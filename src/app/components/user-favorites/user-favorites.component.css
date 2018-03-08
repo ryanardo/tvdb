@@ -1,0 +1,13 @@
+.favorites {
+  width: 50%;
+  margin: auto;
+}
+.home {
+  width: 50%;
+  margin: auto;
+}
+
+button {
+  background-color: rgba(117, 0, 228, 0);
+  border-color:  rgba(117, 0, 228, 0);
+}
