@@ -1,28 +1,30 @@
-<div class="navbar-fixed ">
-  <nav>
-    <div class="nav-wrapper deep-purple">
-      <!-- LEFT PANEL / LOGO -->
-      <div id="nav-logo">
-        <a href="" class="brand-logo"><i class="material-icons">live_tv</i>TV DB</a>
-      </div>
-      <!-- RIGHT PANEL -->
-      <div class="">
-        <ul class="right hide-on-med-and-down">
-          <li><a routerLink="trend"><i class="material-icons">trending_up</i></a></li>
-          <li><a routerLink="favorites"><i class="material-icons">favorite</i></a></li>
-          <li><a routerLink="login"><i class="material-icons">person</i></a></li>
-        </ul>
-      </div>
-      <!-- SEARCH BAR -->
-      <form class=" hide-on-med-and-down" id="nav-search">
-        <div class="input-field !important" id="nav-search">
-          <input #query id="search" type="search" required onkeyup="getBlogs(this.value,0);" placeholder="Search for your favorite Movies, TV Shows, or Actors!" value="black panther">
-          <i (click)="getSearchResults(query.value, adultContent.value)" class="material-icons">search</i>
-          <div id="searchResults"></div>
+<div *ngIf="router.url !== '/login' ">
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper deep-purple">
+        <!-- LEFT PANEL / LOGO -->
+        <div id="nav-logo">
+          <a href="" class="brand-logo"><i class="material-icons">live_tv</i>TV DB</a>
         </div>
-      </form>
-    </div>
-  </nav>
+        <!-- RIGHT PANEL -->
+        <div class="">
+          <ul class="right hide-on-med-and-down">
+            <li><a routerLink="trend"><i class="material-icons">trending_up</i></a></li>
+            <li><a routerLink="favorites"><i class="material-icons">favorite</i></a></li>
+            <li><a routerLink="login"><i class="material-icons">person</i></a></li>
+          </ul>
+        </div>
+        <!-- SEARCH BAR -->
+        <form class=" hide-on-med-and-down" id="nav-search">
+          <div class="input-field !important" id="nav-search">
+            <input #query id="search" type="search" required onkeyup="getBlogs(this.value,0);" placeholder="Search for your favorite Movies, TV Shows, or Actors!" value="black panther">
+            <i (click)="getSearchResults(query.value, adultContent.value)" class="material-icons">search</i>
+            <div id="searchResults"></div>
+          </div>
+        </form>
+      </div>
+    </nav>
+  </div>
 </div>
-
-<!-- routerLink="search"  -->
+<div>
+</div>
