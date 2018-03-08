@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { masterFirebaseConfig } from '../../api-keys';
+import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -18,12 +18,15 @@ import { HomeComponent } from './components/home/home.component';
 import { ShowDetailComponent } from './components/show-detail/show-detail.component';
 import { SearchComponent } from './components/search/search.component';
 import { UserFavoritesComponent } from './components/user-favorites/user-favorites.component';
+import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
+import {SearchFormComponent} from './components/search-form/search-form.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
   authDomain: masterFirebaseConfig.authDomain,
   databaseURL: masterFirebaseConfig.databaseURL,
-  storageBucket: masterFirebaseConfig.storageBucket
+  storageBucket: masterFirebaseConfig.storageBucket,
+
 };
 
 @NgModule({
@@ -33,7 +36,9 @@ export const firebaseConfig = {
     HomeComponent,
     ShowDetailComponent,
     SearchComponent,
-    UserFavoritesComponent
+    UserFavoritesComponent,
+    UserRegistrationComponent,
+    SearchFormComponent
   ],
   imports: [
     BrowserModule,
