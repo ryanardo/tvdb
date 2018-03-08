@@ -1,33 +1,52 @@
-# Tvdb
+# [TVMDB](https://github.com/ryanglenferris/tvdb)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+## TV DB is a movie and TV database, that allows user's to research and find new movies or TV shows. The program uses The Movie Database API.
 
-## Development server
+### Authors:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- **[Edgar Hernandez Ortiz](https://github.com/Edgarcho)**
+- **[Danyel Murray](https://github.com/danyellington)**
+- **[Matt Jackson](https://github.com/madjacks12)**
+- **[Rodnier Borrego Clavero](https://github.com/rodnierbc)**
+- **[Ryan G Ferris](https://github.com/ryanglenferris)**
 
-## Code scaffolding
+## DESCRIPTION
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+A web application that allows user's to search for movie or tv shows based on name, keyword.
 
-## Build
+## BUILD
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Copy the commands below to get the project started!
 
-## Running unit tests
+### Clone the repo
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+git clone https://github.com/ryanglenferris/tvdb;
+```
 
-## Running end-to-end tests
+### Installation _(NodeJS and Bower)_
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+```
+npm install;
+bower install;
+```
 
-## Further help
+### Start the Server
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+ng serve;
+```
 
-## Materialize
-Follow setup instructions here: https://www.npmjs.com/package/angular2-materialize
+### TECH USED
 
-Materialize Components http://materializecss.com/
+Here is the tech used to make the Project work:
+
+- **AngularJS**
+- **Angular CLI**
+- **Bower**
+- **Git**
+- **JavaScript**
+- **Material Angular**
+- **[The Movie DB API](https://developers.themoviedb.org/3/getting-started)**
+- **NodeJS**
+- **Webpack**
