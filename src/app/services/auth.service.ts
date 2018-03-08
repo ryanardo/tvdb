@@ -52,7 +52,7 @@ this.user.subscribe(
   }
   logout() {
     this._firebaseAuth.auth.signOut()
-    .then((res) => this.router.navigate(['/']));
+    .then((res) => this.router.navigate(['login']));
   }
   createUserRegular(email, password) {
    const credential = firebase.auth.EmailAuthProvider.credential( email, password );

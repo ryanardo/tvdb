@@ -22,28 +22,28 @@ export class LoginComponent implements OnInit {
   signInWithTwitter() {
       this.authService.signInWithTwitter()
       .then((res) => {
-          this.router.navigate(['favorites'])
+          this.router.navigate([''])
         })
       .catch((err) => console.log(err));
     }
     signInWithFacebook() {
       this.authService.signInWithFacebook()
       .then((res) => {
-          this.router.navigate(['favorites'])
+          this.router.navigate([''])
         })
       .catch((err) => console.log(err));
     }
     signInWithGoogle() {
       this.authService.signInWithGoogle()
       .then((res) => {
-          this.router.navigate(['favorites'])
+          this.router.navigate([''])
         })
       .catch((err) => console.log(err));
     }
     signInWithGithub() {
       this.authService.signInWithGithub()
          .then((res) => {
-            this.router.navigate(['favorites'])
+            this.router.navigate([''])
          })
          .catch((err) => console.log(err));
     }
@@ -51,7 +51,7 @@ export class LoginComponent implements OnInit {
      this.authService.SignInRegular(this.user.email, this.user.password)
      .then((res) => {
         console.log(res);
-        this.router.navigate(['favorites']);
+        this.router.navigate(['']);
      })
      .catch((err) => {
        console.log('error: ' + err);

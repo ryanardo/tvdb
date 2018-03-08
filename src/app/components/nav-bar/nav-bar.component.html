@@ -11,12 +11,13 @@
           <li><a routerLink="trend"><i class="material-icons">trending_up</i></a></li>
           <li><a routerLink="favorites"><i class="material-icons">favorite</i></a></li>
           <li><a routerLink="login"><i class="material-icons">person</i></a></li>
+          <li *ngIf= "this.authService.userDetails"><a (click)="authService.logout()" routerLink="login">logout<i class="material-icons"></i></a></li>
         </ul>
       </div>
       <!-- SEARCH BAR -->
       <form class=" hide-on-med-and-down" id="nav-search">
         <div class="input-field !important" id="nav-search">
-          <input #query id="search" type="search" required onkeyup="getBlogs(this.value,0);" placeholder="Search for your favorite Movies, TV Shows, or Actors!" value="black panther">
+          <input #query id="search" type="search" required onkeyup="getBlogs(this.value,0);" placeholder="Search for your favorite Movies, TV Shows, or Actors!">
           <i (click)="getSearchResults(query.value, adultContent.value)" class="material-icons">search</i>
           <div id="searchResults"></div>
         </div>

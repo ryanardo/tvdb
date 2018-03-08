@@ -35,7 +35,7 @@ export class UserRegistrationComponent implements OnInit {
        })
 
          console.log(res);
-         this.router.navigate(['favorites']);
+         this.router.navigate(['']);
       })
       .catch((err) => {
         console.log('error: ' + err);
