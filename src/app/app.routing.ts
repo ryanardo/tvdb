@@ -16,6 +16,10 @@ const appRoutes: Routes = [
 		component: HomeComponent
 	},
 	{
+		path: 'home',
+		component: HomeComponent
+	},
+	{
 		path: 'search',
 		component: SearchFormComponent
 	},
