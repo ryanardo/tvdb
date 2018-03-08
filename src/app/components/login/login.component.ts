@@ -22,37 +22,42 @@ export class LoginComponent implements OnInit {
   signInWithTwitter() {
       this.authService.signInWithTwitter()
       .then((res) => {
-          this.router.navigate([''])
+          this.router.navigate(['favorites'])
         })
       .catch((err) => console.log(err));
     }
     signInWithFacebook() {
       this.authService.signInWithFacebook()
       .then((res) => {
-          this.router.navigate([''])
+          this.router.navigate(['favorites'])
         })
       .catch((err) => console.log(err));
     }
     signInWithGoogle() {
       this.authService.signInWithGoogle()
       .then((res) => {
-          this.router.navigate([''])
+          this.router.navigate(['favorites'])
         })
       .catch((err) => console.log(err));
     }
     signInWithGithub() {
       this.authService.signInWithGithub()
          .then((res) => {
-            this.router.navigate([''])
+            this.router.navigate(['favorites'])
          })
          .catch((err) => console.log(err));
     }
-    signInWithEmail() {
-      this.authService.signInRegular(this.user.email, this.user.password)
-      .then((res) => {
-         console.log(res);
-         this.router.navigate(['']);
-      })
-      .catch((err) => console.log('error: ' + err));
-   }
+   SignInRegular() {
+     this.authService.SignInRegular(this.user.email, this.user.password)
+     .then((res) => {
+        console.log(res);
+        this.router.navigate(['favorites']);
+     })
+     .catch((err) => {
+       console.log('error: ' + err);
+     });
+  }
+  goToRegister(){
+    this.router.navigate(['user-registration']);
+  }
 }

@@ -22,6 +22,8 @@ import { TrendComponent } from './components/trend/trend.component';
 import { MovieDetailComponent } from './components/movie-detail-page/movie-detail-page.component';
 import { TvDetailPageComponent } from './components/tv-detail-page/tv-detail-page.component';
 import { ShowDetailComponent } from './components/show-detail/show-detail.component';
+import { AuthGuardService } from './services/auth-guard.service';
+import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
 
 export const firebaseConfig = {
 	apiKey: masterFirebaseConfig.apiKey,
@@ -42,7 +44,8 @@ export const firebaseConfig = {
 		MovieDetailComponent,
 		TvDetailPageComponent,
 		HomeComponent,
-		ShowDetailComponent
+		ShowDetailComponent,
+		UserRegistrationComponent
 	],
 	imports: [
 		BrowserModule,
@@ -54,7 +57,7 @@ export const firebaseConfig = {
 		AngularFireAuthModule,
 		MaterializeModule
 	],
-	providers: [AuthService],
+	providers: [AuthService,AuthGuardService],
 	bootstrap: [AppComponent]
 })
 
