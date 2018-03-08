@@ -1,17 +1,18 @@
 {
-	"name": "tvdb",
-	"description": "",
-	"main": "",
-	"license": "MIT",
-	"homepage": "https://github.com/ryanglenferris/tvdb",
-	"ignore": [
+  "name": "tvdb",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/ryanglenferris/tvdb",
+  "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
   ],
-	"dependencies": {
-		"bootstrap": "^4.0.0"
-	}
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "materialize-social": "^1.0.3"
+  }
 }

@@ -6,7 +6,7 @@
             <div class="login__card">
               <div class="card-block">
                   <form name="userform" method="post" #formCtrl="ngForm">
-                    <h3 align="center">Login Form</h3>
+                    <h3 align="center">Login</h3>
                     <div class="form-group">
                       <label for="exampleInputEmail1">Email address</label>
                       <input type="email" class="form-control" [(ngModel)]="user.email" name="email" placeholder="Email" required>
@@ -17,6 +17,15 @@
                     </div>
 
                     <div class="form-group">
+<<<<<<< HEAD
+                        <!-- <button type="buton" class="btn btn-primary btn-block" style="margin-bottom: 20px" (click)="signInWithEmail()" [disabled]="formCtrl.form.invalid">
+                          Login with Email
+                        </button> -->
+                        <div class="row">
+                          <a (click)="signInWithEmail()" class="waves-effect waves-light btn col s12 deep-purple">
+                          <i></i>Sign in with Email</a>
+                        </div>
+=======
                         <button type="buton" class="btn btn-primary btn-block" style="margin-bottom: 20px" (click)="SignInRegular()" [disabled]="formCtrl.form.invalid">
                           Login with Email
                         </button>
@@ -26,26 +35,27 @@
                           Register
                         </button>
                     </div>
+>>>>>>> 94ba91aeee54b9b59499cbd7bae64ce35fd50e3f
 
+                    </div>
                     <div class="form-group">
-                        <button type="buton" class="btn btn-block" (click)="signInWithFacebook()">
-                          <img class="icon" src="../../assets/icons/social-facebook.png" aria-hidden="true" >
-                          Login with Facebook
-                        </button>
-                        <button type="button" class="btn btn-block" (click)="signInWithTwitter()">
-                          <img class="icon" src="../../assets/icons/social-twitter.png" aria-hidden="true" >
-                          Login with Twitter
-                        </button>
+                    <div class="row">
+                      <a (click)="signInWithFacebook()" class="waves-effect waves-light btn col s12 social facebook blue darken-4">
+                      <i class="fa fa-facebook"></i> Sign in with facebook</a>
+                    </div>
+                    <div class="row">
+                      <a (click)="signInWithGithub()" class="waves-effect waves-light btn col s12 social github black">
+                      <i class="fa fa-github"></i> Sign in with github</a>
+                    </div>
+                    <div class="row">
+                    <a (click)="signInWithGoogle()" class="waves-effect waves-light btn col s12 social google red">
+                    <i class="fa fa-google"></i> Sign in with google</a>
+                  </div>
 
-                        <button type="button" class="btn btn-block" (click)="signInWithGithub()">
-                          <img class="icon" src="../../assets/icons/social-github.png" aria-hidden="true" >
-                          Login with Github
-                        </button>
-
-                        <button type="button" class="btn btn-block" (click)="signInWithGoogle()">
-                          <img class="icon" src="../../assets/icons/social-google.png" aria-hidden="true" >
-                          Login with Google
-                        </button>
+                  <div class="row">
+                    <a (click)="signInWithTwitter()" class="waves-effect waves-light btn col s12 social twitter light-blue">
+                    <i class="fa fa-twitter"></i> Sign in with twitter</a>
+                  </div>
                     </div>
                   </form>
               </div>
