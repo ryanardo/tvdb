@@ -36,5 +36,9 @@ export class TMDB_API {
 		return this.http.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`);
 	}
 
+	getUpcomingMovies() {
+		return this.http.get(`https://api.themoviedb.org/3/movie/upcoming?api_key=${{API_KEY}}&language=en-US&page=1`);
+	}
+
 
 } //End of the 'TMDB' Constructor.
