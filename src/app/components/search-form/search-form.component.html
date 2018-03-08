@@ -1,5 +1,6 @@
 <h4>Looking for something to watch?</h4>
 <h5>Find the latest in movies and television available now for streaming </h5>
+
 <form>
   <div class="form-group">
     <label for="query">Search your favorite movies, shows, and actors</label>
@@ -7,30 +8,17 @@
   </div>
 
   <div class="form-group">
-    <!-- <label for="adultContent">Allow adult content?</label> -->
-    <!-- <div class="switch">
-    <label>
-        Off
-        <input ng-click="isSwitchedOn = !isSwitchedOn" ng-checked="isSwitchedOn" type="checkbox">
-        <span class="lever"></span>
-        On
-    </label>
-</div> -->
-
     <select #adultContent>
-      <option  value="true">Yes</option>
       <option value="false">No</option>
+      <option  value="true">Yes</option>
     </select>
   </div>
 
-  <!-- <a (click)="getSearchResults(query.value, adultContent.value)" class="waves-effect waves-light btn-large deep-purple"><i class="material-icons right">fast_forward</i>GetMovies</a> -->
   <div class="row">
     <a (click)="getSearchResults(query.value, adultContent.value)" class="waves-effect waves-light btn col s12 deep-purple">
     <i></i>Get Movies</a>
   </div>
 </form>
-
-<!-- <app-search-results></app-search-results> -->
 
 <div *ngIf="movies">
   <app-search-results [childSearchResults]="movies"></app-search-results>
