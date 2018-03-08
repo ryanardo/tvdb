@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterializeModule } from "angular2-materialize";
 
@@ -52,7 +53,6 @@ export const firebaseConfig = {
 		UserRegistrationComponent,
 		NavBarComponent,
 		ActorsComponent,
-
 		AppComponent,
 		LoginComponent,
 		HomeComponent,
@@ -60,7 +60,8 @@ export const firebaseConfig = {
 		SearchComponent,
 		UserFavoritesComponent,
 		UserRegistrationComponent,
-		SearchFormComponent
+		SearchFormComponent,
+		BrowserAnimationsModule
 	],
 	imports: [
 		BrowserModule,

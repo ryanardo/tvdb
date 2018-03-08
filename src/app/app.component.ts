@@ -5,6 +5,8 @@ import { AuthService } from './services/auth.service'
 import * as firebase from 'firebase';
 import { routing } from './app.routing';
 
+import 'hammerjs';
+
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',

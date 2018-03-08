@@ -23,6 +23,14 @@
     </select>
   </div>
 
+  <mat-form-field>
+    <mat-select placeholder="Favorite food">
+      <mat-option *ngFor="let food of foods" [value]="food.value">
+        {{ food.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
   <!-- <a (click)="getSearchResults(query.value, adultContent.value)" class="waves-effect waves-light btn-large deep-purple"><i class="material-icons right">fast_forward</i>GetMovies</a> -->
   <div class="row">
     <a (click)="getSearchResults(query.value, adultContent.value)" class="waves-effect waves-light btn col s12 deep-purple">
