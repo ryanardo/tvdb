@@ -19,7 +19,6 @@
             <ng-template #movieRoute>
               <h5 class="card-title"> {{movie.title}}</h5>
               <a href="movie/{{movie.id}}" class="secondary-content"><i class="material-icons">info</i></a>
-              <a class="btn-floating btn-large waves-effect waves-light deep-purple" (click)="saveItem(movie.id, movie.backdrop_path, movie.original_name)"><i class="material-icons">add</i></a>
               <a class="btn-floating btn-large waves-effect waves-light deep-purple" (click)="saveItem(movie.id, movie.media_type,  movie.backdrop_path, movie.title)"><i class="material-icons">add</i></a>
             </ng-template>
           </div>

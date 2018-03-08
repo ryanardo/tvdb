@@ -5,7 +5,7 @@
       <div class="card-body">
         <h5 class="card-title">{{movie.name}}</h5>
         <a *ngIf="movie.mediaType == 'tv'" (click)="goToDetailsTv(movie.itemId)" class="secondary-content"><button>details<i class="material-icons">info</i></button></a>
-        <a  *ngIf="movie.mediaType == 'movie'"(click)="goToDetailsMovie(movie.itemId)"><button>info<i class="material-icons">info</i></button></a>
+        <a *ngIf="movie.mediaType == 'movie'"(click)="goToDetailsMovie(movie.itemId)"><button>details<i class="material-icons">info</i></button></a>
   </div>
   </div>
   <br>
