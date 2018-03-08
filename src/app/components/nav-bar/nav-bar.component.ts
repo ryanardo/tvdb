@@ -11,7 +11,7 @@ import * as firebase from 'firebase';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor(public authService: AuthService, private router: Router) { }
+	constructor(public authService: AuthService, private router: Router) { }
 
 	ngOnInit() {
 	}
