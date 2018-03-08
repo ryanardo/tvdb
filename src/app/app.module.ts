@@ -26,6 +26,8 @@ import { UserRegistrationComponent } from './components/user-registration/user-r
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ActorsComponent } from './actors/actors.component';
 
+import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
+import {SearchFormComponent} from './components/search-form/search-form.component';
 export const firebaseConfig = {
 	apiKey: masterFirebaseConfig.apiKey,
 	authDomain: masterFirebaseConfig.authDomain,
@@ -48,7 +50,16 @@ export const firebaseConfig = {
 		ShowDetailComponent,
 		UserRegistrationComponent,
 		NavBarComponent,
-		ActorsComponent
+		ActorsComponent,
+
+		AppComponent,
+		LoginComponent,
+		HomeComponent,
+		ShowDetailComponent,
+		SearchComponent,
+		UserFavoritesComponent,
+		UserRegistrationComponent,
+		SearchFormComponent
 	],
 	imports: [
 		BrowserModule,
@@ -58,7 +69,15 @@ export const firebaseConfig = {
 		AngularFireModule.initializeApp(firebaseConfig),
 		AngularFireDatabaseModule,
 		AngularFireAuthModule,
-		MaterializeModule
+		MaterializeModule,
+
+		BrowserModule,
+		FormsModule,
+		HttpModule,
+		routing,
+		AngularFireModule.initializeApp(firebaseConfig),
+		AngularFireDatabaseModule,
+		AngularFireAuthModule
 	],
 	providers: [AuthService,AuthGuardService],
 	bootstrap: [AppComponent]
