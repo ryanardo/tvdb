@@ -36,7 +36,11 @@ export class LoginComponent implements OnInit {
     signInWithGoogle() {
       this.authService.signInWithGoogle()
       .then((res) => {
-          this.router.navigate([''])
+        firebase.database().ref('user/' + firebase.auth().currentUser.uid).update({
+        name:  firebase.auth().currentUser.displayName,
+        })
+        console.log(res);
+        this.router.navigate(['favorites']);
         })
       .catch((err) => console.log(err));
     }

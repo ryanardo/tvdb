@@ -4,15 +4,15 @@ import { AuthService } from '../../services/auth.service';
 import * as firebase from 'firebase';
 
 @Component({
-  selector: 'app-nav-bar',
-  templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.css']
+	selector: 'app-nav-bar',
+	templateUrl: './nav-bar.component.html',
+	styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
 
-  constructor(public authService: AuthService) { }
+  constructor(public authService: AuthService, private router: Route) { }
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
 
 }

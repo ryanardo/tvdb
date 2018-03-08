@@ -1,27 +1,46 @@
-<div>
-<img src="http://image.tmdb.org/t/p/w1280/{{example.backdrop_path}}">
-<h1>
-  {{example.name}}
-</h1>
-<ul *ngFor="let genre of example.genres">
-  <li> {{genre.name }} </li>
-</ul>
-<hr>
-<h4> Overview</h4>
-  <p>
-  {{example.overview}}
-</p>
-<h4> Creators</h4>
-<div *ngFor="let creator of example.created_by">
-  <p> {{ creator.name }}</p>
-  <img src="http://image.tmdb.org/t/p/w185/{{creator.profile_path}}">
-</div>
 
-<div>
-  <h3>Similar Shows</h3>
-  <div *ngFor="let show of similar.results">
-    <p> {{ show.name }}</p>
-    <p>First Aired: <strong>{{show.first_air_date}}</strong></p>
-    <img src="http://image.tmdb.org/t/p/w500/{{show.backdrop_path}}">
+    <img class="hero" src="http://image.tmdb.org/t/p/w1280/{{example.backdrop_path}}">
+    <div class="container-2">
+
+  <h1>
+    {{example.name}}
+  </h1>
+  <ul *ngFor="let genre of example.genres" class="genres">
+    <li><h5>{{genre.name}}</h5></li>
+  </ul>
+  <hr>
+  <h4> Overview</h4>
+    <p>
+    {{example.overview}}
+  </p>
+  <h4> Creators</h4>
+  <div *ngFor="let creator of example.created_by" class="creators">
+    <h5> {{ creator.name }}</h5>
+    <img src="http://image.tmdb.org/t/p/w185/{{creator.profile_path}}">
+  </div>
+  <br>
+  <br>
+  <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Similar Shows</a>
+   <!-- Dropdown Structure -->
+   <ul id='dropdown1' class='dropdown-content'>
+     <li *ngFor="let show of similar.results"><a href="tv/{{show.id}}">{{show.original_name}}</a></li>
+   </ul>
+   <br>
+   <br>
+
+  <h4> Cast</h4>
+  <div class="container">
+    <div *ngFor="let act of actor.cast" class="cast">
+      <div class="actors">
+      <h5 style="color:#600080"><strong>{{act.character}}</strong></h5>
+      <h5>{{act.name}}</h5>
+      <div *ngIf="act.profile_path; else noImage">
+        <img src="http://image.tmdb.org/t/p/w185/{{act.profile_path}}">
+      </div>
+      <ng-template #noImage>
+        <img src="http://www.missingkids.com/etc/clientlibs/ncmec/poster/images/poster/en_US/noPhotoAvailable.jpg" width="185px" height="267px">
+      </ng-template>
+      </div>
+    </div>
   </div>
 </div>

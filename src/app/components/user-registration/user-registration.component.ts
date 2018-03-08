@@ -10,7 +10,8 @@ import * as firebase from 'firebase';
 })
 export class UserRegistrationComponent implements OnInit {
   user = {
-     email: '',
+     name: '',
+      email: '',
      password: '',
    };
   passwordConfirmation;
@@ -19,23 +20,18 @@ export class UserRegistrationComponent implements OnInit {
   ngOnInit() {
   }
   createUserRegular() {
-    if(this.user.password.length < 6){
-       alert("Your password must have at least 6 characters.");
+     if(this.user.password !== (this.passwordConfirmation)){
+       alert("incorrect");
        return;
-    }
-    else if(this.user.password !== (this.passwordConfirmation)){
-      alert("incorrect");
-      return;
-    }
-    else {
+     }
+     else {
       this.authService.createUserRegular(this.user.email, this.user.password)
       .then((res) => {
         firebase.database().ref('user/' + firebase.auth().currentUser.uid).update({
-        test: "Rodnier",
-       })
-
-         console.log(res);
-         this.router.navigate(['']);
+        name: this.user.name ? this.user.name : 'Null',
+        })
+        console.log(res);
+        this.router.navigate(['favorites']);
       })
       .catch((err) => {
         console.log('error: ' + err);

@@ -1,6 +1,10 @@
 <form name="userRegistrationForm" method="post" #RegistrationForm="ngForm">
   <h3 align="center">Registration</h3>
   <div class="form-group">
+    <label for="firstName">Name</label>
+    <input type="text" class="form-control" [(ngModel)]="user.name" name="name" placeholder="Full Name" required>
+  </div>
+  <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
     <input type="email" class="form-control" [(ngModel)]="user.email" name="email" placeholder="Email" required>
   </div>
