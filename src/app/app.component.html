@@ -7,6 +7,9 @@
         <li><a routerLink="favorites"><i class="material-icons">favorite</i></a></li>
         <li><a href="browse"><i class="material-icons">trending_up</i></a></li>
         <li><a href="login"><i class="material-icons">person</i></a></li>
+        <li><a href="" (click)="authService.logout()">Logout</a></li>
+        <li *ngIf = "this.authService.userDetails">{{this.authService.userDetails.displayName}}</li>
+
       </ul>
     </div>
   </nav>
