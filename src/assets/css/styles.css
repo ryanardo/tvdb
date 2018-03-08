@@ -1,8 +1,10 @@
 
 body {
-background-image: url("../images/background.jpg");
+background-image: url("../images/web.jpg");
+background-repeat: no-repeat;
+   background-size: auto;
 }
 
-text {
-  color: purple;
+font {
+  color: white !important;
 }
