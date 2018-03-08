@@ -4,13 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routing } from './app.routing';
 import { MaterializeModule } from "angular2-materialize";
-
+import { CommonModule } from '@angular/common';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AuthService } from './services/auth.service';
-
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
@@ -24,6 +23,8 @@ import { TvDetailPageComponent } from './components/tv-detail-page/tv-detail-pag
 import { ShowDetailComponent } from './components/show-detail/show-detail.component';
 import { AuthGuardService } from './services/auth-guard.service';
 import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { ActorsComponent } from './actors/actors.component';
 
 export const firebaseConfig = {
 	apiKey: masterFirebaseConfig.apiKey,
@@ -45,7 +46,9 @@ export const firebaseConfig = {
 		TvDetailPageComponent,
 		HomeComponent,
 		ShowDetailComponent,
-		UserRegistrationComponent
+		UserRegistrationComponent,
+		NavBarComponent,
+		ActorsComponent
 	],
 	imports: [
 		BrowserModule,

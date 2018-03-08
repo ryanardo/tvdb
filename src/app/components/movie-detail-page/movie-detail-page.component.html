@@ -1,3 +1,49 @@
-<p>
-  detail-page works!
+<div>
+<img src="http://image.tmdb.org/t/p/w1280/{{content.backdrop_path}}">
+<h1>
+  {{content.name}}
+</h1>
+<h3>Genres</h3>
+<ul *ngFor="let genre of content.genres">
+  <li> {{genre.name }} </li>
+</ul>
+<hr>
+<h4> Overview</h4>
+  <p>
+  {{content.overview}}
 </p>
+<div *ngIf="content.created_by">
+  <h4> Creators</h4>
+  <div *ngFor="let creator of content.created_by">
+    <p> {{ creator.name }}</p>
+    <img src="http://image.tmdb.org/t/p/w185/{{creator.profile_path}}">
+  </div>
+</div>
+
+  <!-- <h4> Trailers</h4>
+  <div *ngFor="let trailer of video.results">
+    <iframe src="{{'https://www.youtube.com/embed/' + $trailer.key | trustAsResourceUrl}}"></iframe>
+  </div> -->
+
+
+<div>
+  <h3>Similar Films</h3>
+  <div *ngFor="let film of similar.results">
+    <p> {{ film.title }}</p>
+    <p>Released: <strong>{{film.release_date}}</strong></p>
+    <img src="http://image.tmdb.org/t/p/w500/{{film.backdrop_path}}">
+  </div>
+</div>
+
+<h4> Actors</h4>
+<div *ngFor="let act of actor.cast">
+  <div>
+  <h5>Character: {{act.character}}</h5>
+  <h5>Played by: {{act.name}}</h5>
+  <div *ngIf="act.profile_path; else noImage">
+    <img src="http://image.tmdb.org/t/p/w185/{{act.profile_path}}">
+  </div>
+  <ng-template #noImage>
+    <p style="color:red">No image available</p>
+  </ng-template>
+</div>

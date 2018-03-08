@@ -10,9 +10,13 @@
   </ng-template>
 
   <div *ngIf="movie.media_type == 'tv'; else movieRoute">
-    <a href="tv/{{movie.id}}"><button>More</button></a>
+    <!-- <a href="tv/{{movie.id}}"><button>More</button></a> -->
+    <a href="tv/{{movie.id}}" class="waves-effect waves-light btn-large deep-purple">Details</a>
+    <a class="btn-floating btn-large waves-effect waves-light deep-purple"><i class="material-icons">add</i></a>
   </div>
   <ng-template #movieRoute>
-    <a href="movie/{{movie.id}}"><button>More</button></a>
+    <a href="movie/{{movie.id}}" class="waves-effect waves-light btn-large deep-purple">Details</a>
+    <a class="btn-floating btn-large waves-effect waves-light deep-purple"><i class="material-icons">add</i></a>
+
   </ng-template>
 </div>
