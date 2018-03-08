@@ -11,6 +11,7 @@ import { TMDB_API } from './../../services/api/tmdb.service';
 
 export class TrendComponent implements OnInit {
   public nowPlayingResults
+  public upcomingMovies
 
   constructor(private tmdb_api: TMDB_API) {
    }
@@ -20,6 +21,12 @@ export class TrendComponent implements OnInit {
       this.nowPlayingResults = response.json();
       console.log(this.nowPlayingResults)
     });
+
+    this.tmdb_api.getUpcomingMovies().subscribe(response => {
+      this.upcomingMovies = response.json();
+      console.log(this.upcomingMovies)
+    });
+
   }
 
 }

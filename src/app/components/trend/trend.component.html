@@ -1,7 +1,7 @@
 <div class="container">
-  <h1>Now Playing</h1>
   <div class="row">
       <div class="col s6">
+        <h1>Now Playing</h1>
         <div class="card-panel hoverable" *ngFor="let nowPlayingResult of nowPlayingResults.results">
           <div class="card-image">
             <img src="http://image.tmdb.org/t/p/w185/{{nowPlayingResult.poster_path}}">
@@ -12,7 +12,25 @@
             <p>{{nowPlayingResult.overview}}</p>
           </div>
           <div class="card-action">
+            <a href="movie/{{nowPlayingResult.id}}" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">info</i></a>
             <span class="badge">Movie Rating: {{nowPlayingResult.vote_average}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="col s6">
+        <h1 class="ComingSoonTitle">Coming Soon</h1>
+        <div class="card-panel hoverable" *ngFor="let upcomingMovie of upcomingMovies.results">
+          <div class="card-image">
+            <img src="http://image.tmdb.org/t/p/w185/{{upcomingMovie.poster_path}}">
+            <br>
+            <span class="card-title">{{upcomingMovie.original_title}}</span>
+          </div>
+          <div class="card-content">
+            <p>{{upcomingMovie.overview}}</p>
+          </div>
+          <div class="card-action">
+            <a href="movie/{{upcomingMovie.id}}" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">info</i></a>
+            <span class="badge">Movie Rating: {{upcomingMovie.vote_average}}</span>
           </div>
         </div>
       </div>
