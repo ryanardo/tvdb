@@ -1,2 +1,10 @@
 
-body { background-color: gray; }
+body {
+background-image: url("../images/web.jpg");
+background-repeat: no-repeat;
+   background-size: auto;
+}
+
+font {
+  color: white !important;
+}
