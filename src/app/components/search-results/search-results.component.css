@@ -3,7 +3,15 @@ h5 {
 	font-family: 'Cormorant Garamond';
 	font-size: 20px;
 	font-weight: 400;
-	line-height: 10px;
+	line-height: 22px;
 	text-align: left;
 	text-transform: uppercase;
+}
+
+#add {
+	float: right;
+}
+
+#adds {
+	float: right;
 }
