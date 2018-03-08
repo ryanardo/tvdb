@@ -15,8 +15,6 @@ export class SearchResultsComponent implements OnInit {
 	}
 
 	saveItem(itemId: string, mediaType: string, backdrop: string, name: string) {
-		alert(firebase.auth().currentUser.uid);
-		alert(itemId);
 		firebase.database().ref('userSave/').push({
 			itemId: itemId,
 			userId: firebase.auth().currentUser.uid,
