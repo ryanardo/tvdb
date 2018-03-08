@@ -13,21 +13,31 @@ import { TMDB_API } from './../../services/api/tmdb.service';
 
 export class TvDetailPageComponent implements OnInit {
 
-	result: any[] = null;
 	public href: string = "";
+	public id: string="";
+	public example;
+	public actor;
+	public similar;
+	public video;
 
 	constructor(private router: Router, private tmdb_api: TMDB_API) { }
 
 	ngOnInit() {
 		this.href = this.router.url;
-		var id = this.href.substr(7, 12);
+		//this.id = this.href.substr(4, 12);
+		 this.tmdb_api.getTVById(this.href.substr(4, 12)).subscribe(response => {
+			this.example = response.json();
+			});
+		this.tmdb_api.getActors(this.href.substr(1, 12)).subscribe(response => {
+		 this.actor = response.json();
+		 console.log(this.href.substr(1, 12));
+		 });
+		 this.tmdb_api.getSimilar(this.href.substr(1, 12)).subscribe(response => {
+			this.similar = response.json();
+			});
+		this.tmdb_api.getVideos(this.href.substr(1, 12)).subscribe(response => {
+		 this.video = response.json();
+		 });
 	}
 
-	getDetails(id: string) {
-		this.tmdb_api.getMovieById(id).subscribe(response => {
-			this.result = response.json();
-			console.log(this.result);
-		});
-	}
-	// this.projectToDisplay = this.projectService.getProjectById(this.projectKey);
-} //End
+}
