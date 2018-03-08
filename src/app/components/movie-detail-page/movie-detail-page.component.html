@@ -1,9 +1,9 @@
 
 
-<div>
+<body>
 <img src="http://image.tmdb.org/t/p/w1280/{{content.backdrop_path}}">
 <h1>
-  {{content.name}}
+  {{content.title}}
 </h1>
 <h3>Genres</h3>
 <ul *ngFor="let genre of content.genres" class="genres">
@@ -17,15 +17,16 @@
 <div *ngIf="content.created_by">
   <h4> Creators</h4>
   <div *ngFor="let creator of content.created_by">
+
     <h5> {{ creator.name }}</h5>
     <img src="http://image.tmdb.org/t/p/w185/{{creator.profile_path}}">
   </div>
 </div>
-
-<a class='dropdown-button btn' href='#' data-activates='dropdown1'>Similar Films</a>
+<br>
+<a class='dropdown-button btn deep-purple' href='#' data-activates='dropdown1'>Similar Films</a>
 
  <!-- Dropdown Structure -->
- <ul id='dropdown1' class='dropdown-content'>
+ <ul id='dropdown1' class='dropdown-content deep-purple'>
    <li *ngFor="let film of similar.results"><a href="movie/{{film.id}}">{{film.title}}</a></li>
  </ul>
 
@@ -44,3 +45,4 @@
     </div>
   </div>
 </div>
+</body>
