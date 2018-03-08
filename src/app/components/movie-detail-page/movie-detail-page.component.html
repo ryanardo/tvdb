@@ -3,6 +3,7 @@
 <h1>
   {{content.name}}
 </h1>
+<h3>Genres</h3>
 <ul *ngFor="let genre of content.genres">
   <li> {{genre.name }} </li>
 </ul>
@@ -18,11 +19,6 @@
     <img src="http://image.tmdb.org/t/p/w185/{{creator.profile_path}}">
   </div>
 </div>
-
-  <h4> Trailers</h4>
-  <div *ngFor="let trailer of video.results">
-    <a href="http://www.youtube.com/embed/{{trailer.key}}">hey</a>
-  </div>
 
 
 <div>
