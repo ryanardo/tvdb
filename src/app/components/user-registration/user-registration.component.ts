@@ -31,7 +31,7 @@ export class UserRegistrationComponent implements OnInit {
         name: this.user.name ? this.user.name : 'Null',
         })
         console.log(res);
-        this.router.navigate(['']);
+        this.router.navigate(['home']);
       })
       .catch((err) => {
         console.log('error: ' + err);
