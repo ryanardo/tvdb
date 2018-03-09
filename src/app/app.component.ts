@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component }   from '@angular/core';
+import { Router }      from '@angular/router';
+
+import { routing }     from './app.routing';
 
 import { AuthService } from './services/auth.service'
-import * as firebase from 'firebase';
-import { routing } from './app.routing';
+import * as firebase   from 'firebase';
 
 @Component({
 	selector: 'app-root',
