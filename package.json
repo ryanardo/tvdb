@@ -22,7 +22,7 @@
 		"@angular/router": "^4.4.6",
 		"angular2-materialize": "^15.1.10",
 		"angularfire2": "^4.0.0-rc0",
-		"bootstrap": "^4.0.0",
+		"bootstrap": "^4.3.1",
 		"core-js": "^2.5.3",
 		"firebase": "^3.9.0",
 		"firebase-tools": "^3.17.5",
